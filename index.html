@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nombre del Local – Comida Casera | Pedido por WhatsApp</title>
+  <meta name="description" content="Landing page rápida y llamativa para restaurante/cafetería. Mostrá menú, promociones y ubicación. Pedidos directos por WhatsApp." />
+
+  <!-- Bootstrap 5 (opcional para componentes y grid) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <span class="badge badge-brand rounded-pill">NEW</span> <span class="brand">Nombre del Local</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menú</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#promo">Promos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
+                    <li class="nav-item"><a class="btn btn-sm btn-dark ms-lg-2" href="#pedido">Hacer pedido</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero d-flex align-items-center">
+        <div class="container hero-inner">
+            <div class="row align-items-center justify-content-between g-4">
+                <div class="col-lg-6">
+                    <div class="p-4 px-md-4 hero-card" style="height:455px">
+                        <h1 class="mb-3">Comida casera con <span style="color:var(--brand)">sabor real</span>, lista en minutos</h1>
+                        <p class="lead mb-4">Tu almuerzo, cena o antojo favorito. Pedí por WhatsApp y retirá o recibí en casa. ¡Probá nuestras promos del día!</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a class="btn btn-brand" href="https://wa.me/5493410000000?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+                            <a class="btn btn-ghost" href="#menu">Ver menú</a>
+                        </div>
+                        <div class="mt-3 small text-white-50">Abierto hoy · Retiro en local · Delivery propio</div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <img class="img-fluid rounded-4 shadow" alt="Plato destacado" src="assets/img/destacado.jpg" style="max-height: 100vh; width:auto"/>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PROMO STRIP -->
+    <div id="promo" class="promo py-3">
+        <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
+            <div class="d-flex align-items-center gap-2"><span class="chip text-white-75">HOY</span> <strong>2x1 en pastas</strong> de 12 a 15 hs</div>
+            <a class="btn btn-sm btn-light" href="#pedido">Aprovechar promo</a>
+        </div>
+    </div>
+
+    <!-- MENU -->
+    <section id="menu">
+        <div class="container">
+            <div class="row align-items-end g-3 mb-4">
+                <div class="col-md-8">
+                    <h2 class="mb-1">Menú destacado</h2>
+                    <p class="text-muted">Platos frescos y caseros listos para disfrutar. Pedilos por WhatsApp.</p>
+                </div>
+                <div class="col-md-4 text-md-end"><a href="#pedido" class="btn btn-brand">Hacer pedido</a></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <article class="card-food h-100">
+                        <img src="/assets/img/milanapo.jpg" alt="Milanesa napolitana">
+                        <div class="p-3 p-md-4">
+                            <h3 class="h5 mb-1">Milanesa Napolitana</h3>
+                            <p class="small text-muted mb-2">Con papas rústicas y salsa especial de la casa.</p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="price h5 mb-0">$10.500</span>
+                                <a class="btn btn-sm btn-outline-dark" href="https://wa.me/5493410000000?text=Quiero%20Milanesa%20Napolitana">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <article class="card-food h-100">
+                        <img src="/assets/img/ravioles.jpg" alt="Ravioles caseros">
+                        <div class="p-3 p-md-4">
+                            <h3 class="h5 mb-1">Ravioles Caseros</h3>
+                            <p class="small text-muted mb-2">Rellenos de ricota y nuez, con salsa bolognesa.</p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="price h5 mb-0">$11.000</span>
+                                <a class="btn btn-sm btn-outline-dark" href="https://wa.me/5493410000000?text=Quiero%20Ravioles%20Caseros">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <article class="card-food h-100">
+                        <img src="/assets/img/ensalada.jpg" alt="Ensalada primavera">
+                        <div class="p-3 p-md-4">
+                            <h3 class="h5 mb-1">Ensalada Primavera</h3>
+                            <p class="small text-muted mb-2">Verdes, tomates cherries, pollo grillado y aderezo cítrico.</p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="price h5 mb-0">$7.500</span>
+                                <a class="btn btn-sm btn-outline-dark" href="https://wa.me/5493410000000?text=Quiero%20Ensalada%20Primavera">Pedir</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Beneficios -->
+            <div class="row g-4 mt-1 mt-md-4">
+                <div class="col-md-4 reveal">
+                    <div class="p-4 bg-white rounded-4 border h-100">
+                        <h4 class="h6">Delivery propio</h4>
+                        <p class="text-muted small mb-0">Enviamos en menos de 40 minutos en la zona.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="p-4 bg-white rounded-4 border h-100">
+                        <h4 class="h6">Ingredientes frescos</h4>
+                        <p class="text-muted small mb-0">Compramos a productores locales todas las semanas.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="p-4 bg-white rounded-4 border h-100">
+                        <h4 class="h6">Pagá como quieras</h4>
+                        <p class="text-muted small mb-0">Efectivo, transferencia y tarjetas por Mercado Pago.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="bg-white">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-5">
+                    <h2 class="mb-3">Lo que dicen nuestros clientes</h2>
+                    <p class="text-muted">Opiniones reales de quienes ya probaron.</p>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row g-4">
+                        <div class="col-md-6 reveal">
+                            <div class="p-4 rounded-4 border bg-white h-100">
+                                <p class="quote mb-3">“Pedi ravioles y estaban increíbles. Llegaron calentitos y a tiempo.”</p>
+                                <div class="small text-muted">— Sofía R.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 reveal">
+                            <div class="p-4 rounded-4 border bg-white h-100">
+                                <p class="quote mb-3">“La milanesa napo es un golazo. Se nota la calidad.”</p>
+                                <div class="small text-muted">— Diego M.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIÓN / HORARIO -->
+    <section id="ubicacion">
+        <div class="container">
+            <div class="row g-5 align-items-start">
+                <div class="col-lg-6 reveal">
+                    <h2 class="mb-3">Encontranos</h2>
+                    <p class="text-muted">Av. Pellegrini 2500, S2000QDP Rosario, Santa Fe</p>
+                    <iframe class="map" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2759.401485383131!2d-60.6627864250355!3d-32.953664472241826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab692b083ae9%3A0x97a45ac17b15ca7d!2sAv.%20Pellegrini%202500%2C%20S2000QDP%20Rosario%2C%20Santa%20Fe!5e1!3m2!1ses-419!2sar!4v1754926465378!5m2!1ses-419!2sar"></iframe>
+                </div>
+                <div class="col-lg-5 offset-lg-1 reveal">
+                    <h2 class="mb-3">Horarios</h2>
+                    <ul class="list-unstyled schedule mb-4">
+                        <li><span>Lunes a Viernes</span><span>12:00–15:00 · 20:00–23:30</span></li>
+                        <li><span>Sábados</span><span>12:30–16:00 · 20:00–00:00</span></li>
+                        <li><span>Domingos</span><span>19:30–23:30</span></li>
+                    </ul>
+                    <div id="pedido" class="d-grid gap-2">
+                        <a class="btn btn-brand" href="https://wa.me/5493410000000?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+                        <a class="btn btn-outline-dark" href="tel:+543410000000">Llamar al local</a>
+                    </div>
+                    <div class="small text-muted mt-3">Aceptamos efectivo, transferencia y tarjetas por Mercado Pago.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h5 class="mb-2">Nombre del Local</h5>
+                    <p class="mb-1">Comida casera con ingredientes frescos. Delivery en la zona.</p>
+                    <div class="small">© <span id="y"></span> – Todos los derechos reservados</div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a class="me-3" href="#menu">Menú</a>
+                    <a class="me-3" href="#ubicacion">Ubicación</a>
+                    <a href="https://wa.me/5493410000000" target="_blank" rel="noopener">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a class="wa-float" href="https://wa.me/5493410000000?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> <span>Chateá ahora</span>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+:root {
+    /* Cambiá estos colores para adaptar la marca */
+    --brand: #FF6B00; /* acento principal */
+    --brand-dark: #CC5600; /* hover/oscuro */
+    --txt: #1c1c1c; /* texto base */
+    --muted: #6b7280; /* texto secundario */
+    --bg: #fffdf8; /* fondo suave */
+}
+
+html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--txt);
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+}
+
+h1, h2, h3, .brand {
+    font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+}
+
+/* NAVBAR */
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: .3px
+}
+
+.badge-brand {
+    background: var(--brand);
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    min-height: 80vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: radial-gradient(80% 60% at 70% 10%, rgba(255,107,0,.25), transparent 60%), radial-gradient(50% 40% at 0% 100%, rgba(255,107,0,.12), transparent 60%), #0f0f0f;
+    color: #fff;
+}
+
+    .hero:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+        opacity: .35;
+        filter: saturate(1.2) contrast(1.05);
+    }
+
+.hero-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-card {
+    backdrop-filter: blur(6px);
+    background: rgba(0,0,0,.35);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+
+.hero h1 {
+    font-size: clamp(2.1rem, 3vw + 1rem, 4rem);
+    line-height: 1.06
+}
+
+.hero p.lead {
+    color: #e7e7e7
+}
+
+/* CTA buttons */
+.btn-brand {
+    background: var(--brand);
+    color: #fff;
+    border: none;
+    padding: .9rem 1.2rem;
+    border-radius: 14px;
+    font-weight: 700;
+    letter-spacing: .2px;
+    transition: transform .15s ease, background .2s ease, box-shadow .2s ease;
+    box-shadow: 0 10px 30px rgba(255,107,0,.28);
+}
+
+    .btn-brand:hover {
+        background: var(--brand-dark);
+        transform: translateY(-1px);
+        box-shadow: 0 14px 34px rgba(255,107,0,.34);
+    }
+
+.btn-ghost {
+    border: 1.5px solid rgba(255,255,255,.65);
+    color: #fff;
+    padding: .9rem 1.2rem;
+    border-radius: 14px;
+    font-weight: 600;
+}
+
+    .btn-ghost:hover {
+        background: rgba(255,255,255,.1);
+    }
+
+/* PROMO STRIP */
+.promo {
+    background: #111;
+    color: #fff;
+}
+
+    .promo .chip {
+        background: #1f1f1f;
+        border: 1px dashed rgba(255,255,255,.18);
+        padding: .35rem .65rem;
+        border-radius: 999px;
+        font-size: .9rem
+    }
+
+/* SECTIONS */
+section {
+    padding: clamp(48px, 6vw, 88px) 0;
+}
+
+/* MENU GRID */
+.card-food {
+    border: 1px solid #ececec;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform .15s ease, box-shadow .2s ease;
+}
+
+    .card-food:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 30px rgba(0,0,0,.06);
+    }
+
+    .card-food img {
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+    }
+
+    .card-food .price {
+        color: var(--brand);
+        font-weight: 800;
+    }
+
+/* TESTIMONIOS */
+.quote {
+    border-left: 4px solid var(--brand);
+    padding-left: 1rem;
+    color: #374151;
+}
+
+/* HORARIO/UBICACION */
+.schedule li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #ececec;
+    padding: .5rem 0;
+}
+
+.map {
+    border: 0;
+    width: 100%;
+    min-height: 320px;
+    border-radius: 16px;
+}
+
+/* FOOTER */
+footer {
+    background: #0f0f0f;
+    color: #D1D5DB;
+}
+
+    footer a {
+        color: #fff;
+        text-decoration: none
+    }
+
+        footer a:hover {
+            text-decoration: underline
+        }
+
+/* WHATSAPP FLOAT */
+.wa-float {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    background: #25D366;
+    color: #fff;
+    border-radius: 999px;
+    padding: .8rem 1rem;
+    box-shadow: 0 14px 34px rgba(37,211,102,.35);
+    font-weight: 700;
+}
+
+    .wa-float img {
+        width: 24px;
+        height: 24px
+    }
+
+    .wa-float:hover {
+        filter: brightness(.95)
+    }
+
+/* Micro interacciones */
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: all .6s ease
+}
+
+    .reveal.show {
+        opacity: 1;
+        transform: none
+    }
