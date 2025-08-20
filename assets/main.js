@@ -9,3 +9,13 @@ const onScroll = () => {
     });
 };
 document.addEventListener('scroll', onScroll); onScroll();
+
+function matchHeight() {
+  const prevDiv = document.querySelector('.prev-div');
+  const targetImg = document.querySelector('.target-img');
+  if (prevDiv && targetImg) {
+    targetImg.style.height = prevDiv.offsetHeight + 'px';
+  }
+}
+window.addEventListener('load', matchHeight);
+window.addEventListener('resize', matchHeight);
